@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vote validator</title>
+    <link rel="stylesheet" href="keerthi.css">
+    
+</head>
+<body>
+    <div>
+        <label for="">Name:</label>
+        <input type="text" placeholder="enter your name"id=name>
+        <label for="">Age:</label>
+        <input type="number" name="" id="age" placeholder="enter your age">
+        <label for="">Nationality:</label>
+        <input type="text" placeholder="enter your nationality"id=nationality>
+        <button type="submit" onclick="vote()">submit</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function vote(){
+            var age=document.getElementById("age").value;
+            var resultElement=document.getElementById("result");
+            var name=document.getElementById("name");
+            var nationality=document.getElementById("nationality").value;
+            if(age>=18){
+                if(nationality == "India" || nationality=="india"){
+                    resultElement.innerText = name.value+" shadash betta you are eligible to vote"
+                }else {
+                    resultElement.innerText = name.value+"sorry you dont belong to India"
+                }
+            }else{
+                resultElement.innerText = name.value+"you are still a child"
+            }
+        }
+    </script>
+</body>
+</html>
